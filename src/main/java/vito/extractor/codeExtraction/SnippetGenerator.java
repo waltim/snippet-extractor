@@ -38,15 +38,17 @@ public class SnippetGenerator {
         structureFolderGenerator.setCurrentProject(branchesEnum.toString().toLowerCase());
             
         List<String> listMethods = listAllMethodsOfBranch(branchesEnum.getName());
-        System.out.println("    Processando branch " + branchesEnum.getName());
+        //System.out.println("    Processando branch " + branchesEnum.getName());
         
-        System.out.println("");
+        //System.out.println("");
         int contador = 0;
         int total = listMethods.size();
         
+        System.out.println(" " + branchesEnum.toString() + " : "+ total);
+        
         generateMasterSnippets(branchesEnum.toString().toLowerCase());
         for (String method : listMethods) {
-            System.out.println("processando " + contador + " de " + total);
+            //System.out.println("        processando " + contador + " de " + total);
             contador++;
             structureFolderGenerator.createSnippetBranch(method, branchesEnum.toString().toLowerCase());
         }
@@ -54,6 +56,7 @@ public class SnippetGenerator {
 
     public void generateMasterSnippets(String folder) throws IOException {
         final StructureFolderGenerator structureFolderGenerator = new StructureFolderGenerator();
+        System.out.println("Master : " + listAllMethodsOfBranch(MasterEnum.PATH.getName()).size());
         for (String method : listAllMethodsOfBranch(MasterEnum.PATH.getName())) {
             structureFolderGenerator.createSnippetMaster(method, folder);
         }

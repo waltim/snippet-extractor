@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="vito.extractor.tests.TestClassFolderExtraction" time="0.583" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="vito.extractor.tests.TestClassFolderExtraction" time="0.513" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\PainelWebVR\painel-vr\ExtratorMetodosLambdaValder"/>
+    <property name="user.dir" value="E:\PainelWebVR\painel-vr\SnippetExtractor"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
@@ -35,7 +35,7 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
     <property name="user.home" value="C:\Users\73464244172"/>
-    <property name="user.timezone" value="GMT-03:00"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="vito.extractor.tests.TestClassFolderExtraction" name="testMultipleProjects" time="0.526"/>
+  <testcase classname="vito.extractor.tests.TestClassFolderExtraction" name="testMultipleProjects" time="0.46"/>
 </testsuite>

@@ -17,9 +17,14 @@ public class MethodExtractor {
         Pattern middlePattern = Pattern.compile(RegexEnum.METHOD_EXTRACTION.getName(), Pattern.DOTALL);
         Matcher m = middlePattern.matcher(classContent);
         while (m.find()) {
-            out.add(m.group(1));
+            out.add(filterMethod(m.group(1)));
         }
         return out;
+    }
+
+    private String filterMethod(String methodIn) {
+        //methodIn = methodIn.substring(0, methodIn.lastIndexOf("}") + 1);
+        return methodIn;
     }
 
     private String getLastMethod(List<String> in) {
@@ -29,7 +34,7 @@ public class MethodExtractor {
     private List<String> filterLastMethod(List<String> in) {
         String last = getLastMethod(in);
         last = removeLastCharacter(last);
-        in.set(in.size() - 1,last);
+        in.set(in.size() - 1, last);
         return in;
     }
 
@@ -39,6 +44,26 @@ public class MethodExtractor {
             result = str.substring(0, str.length() - 1);
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+
+        MethodExtractor method = new MethodExtractor();
+
+        String teste = "public void test1(){"
+                +   "the monkey is fun and pretty"
+                + "}"
+                + "public void test2(){"
+                + "this is the second method"
+                + "}"
+                + "public void test3(){"
+                + "inside"
+                + "}"
+                + "outside";
+                
+        
+        System.out.println(method.extractContentMethods(teste));
+        
     }
 
 }
